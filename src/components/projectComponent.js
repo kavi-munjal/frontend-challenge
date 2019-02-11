@@ -10,7 +10,7 @@ class CardGroups extends React.Component {
 
     return (
       <Card.Group itemsPerRow={3} >
-        <Card className="cardItem" raised>
+        <Card raised>
           <Card.Content>
             <Card.Header>{this.props.course.dept + ' ' + this.props.course.number}</Card.Header>
             <Card.Description>

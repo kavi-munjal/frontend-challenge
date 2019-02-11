@@ -27,17 +27,19 @@ class Cart extends React.Component {
   {this.props.cart.map((course,index) => {
     return (
       <div className="card container">
-      <CardGroups course={course}/>
-      <Button onClick={(e) => this.props.removeClass(index)}>Remove</Button>
+      <CardGroups className="cardItem" raised course={course}/>
+      <Button className="user dropdown hvr-round-corners" onClick={(e) => this.props.removeClass(index)}>Remove</Button>
       </div>
     )
   })}
-  <Link to={'/checkout'}>Checkout</Link>
+  <Button className='user dropdown hvr-round-corners'><Link to={'/checkout'}>Checkout</Link></Button>
   </div>
   :
   <div>Course cart is empty, add some courses!</div>
 }
-        <Link to={'/'}>Return to courses</Link>
+        <Button className='user dropdown hvr-round-corners'>
+        <Link className='user dropdown hvr-round-corners' to={'/'}>Return to courses</Link>
+        </Button>
         <div></div>
       </div>
     )
